@@ -27,8 +27,6 @@ public class Example_login {
         // 요청 방식 설정 ( GET or POST or .. 별도로 설정하지않으면 GET 방식 )
         conn.setRequestMethod("POST"); 
         
-       
-        
         // 연결 타임아웃 설정 
         conn.setConnectTimeout(30000); // 30초 
         
