@@ -144,6 +144,7 @@ public class HackerRank_1006_4 {
 		}
 		
 		
+		
 		tmp.stream().sorted( (a,b) -> {
 			if (Integer.parseInt(a.get(0)) > Integer.parseInt(b.get(0))) {
 				return 1;
@@ -153,7 +154,11 @@ public class HackerRank_1006_4 {
 				return -1;
 			}
 		}).forEach(a -> System.out.print(a.get(1) + " "));
-		
+		//tt
+		/*
+		 * 
+		 * 
+		 */
 		List<String> qwe = new ArrayList<>();
 		
 		tmp.stream().sorted( (a,b) -> {

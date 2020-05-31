@@ -1,10 +1,13 @@
 package coding_pretice;
 
-import java.io.ObjectOutputStream.PutField;
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 public class BestAlbum {
 
@@ -12,6 +15,8 @@ public class BestAlbum {
 		// TODO Auto-generated method stub
 		   
 		int[] answer = {};
+		
+		System.out.println("start~");
 		   
 		String[] genres = {"classic", "pop", "classic", "classic", "pop"}; 
 		int[] plays = {500, 600, 150, 800, 2500};
@@ -56,12 +61,11 @@ public class BestAlbum {
 				rankMap.put((Integer) e, plays[(int) e]);
 			});
 			
-			
 			// 높은 순서대로 포문 돌림
 			for(Integer xx : rankMap.keySet()) {
+				System.out.println("================================");
 				System.out.print("index : " + xx + ",     value : ");
 				System.out.println(rankMap.get(xx));
-				System.out.println("================================");
 			}
 			
 			
@@ -126,5 +130,6 @@ public class BestAlbum {
 //		
 //		System.out.println(resultList);
 	}
+
 
 }

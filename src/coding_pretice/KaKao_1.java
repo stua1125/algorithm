@@ -18,13 +18,23 @@ public class KaKao_1 {
 		
 //		listA.size()
 		
+		System.out.println("gggg");
+		
 		Map<Integer, Integer> countMap = new HashMap<>();
 		
 		// listA 배열에 해쉬맵 타입으로 숫자를 key로 두고 value는 count로 사용
 		listA.forEach(e -> {
+			System.out.println("e" + e.byteValue());
 			Integer count = countMap.get(e);
 			countMap.put(e, count == null ? 1 : count + 1);
 		});
+		
+		System.out.println("===================================================");
+		
+		countMap.forEach( (k, v) -> {
+			System.out.println("k " + k + "v " + v);
+		});
+		
 		
 		// 맵에서 정렬을 하기위해 list<list<int>>형으로 변환
 		List<List<Integer>> resultList = new ArrayList<>();
