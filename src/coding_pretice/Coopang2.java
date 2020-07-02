@@ -5,10 +5,11 @@ public class Coopang2 {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		// Àç±Í·Î ¼ýÀÚ ´Ù ´õÇÏ±â
+		// ï¿½ï¿½Í·ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½Ï±ï¿½
 		
-		int a = 10; //= 1
-//		int a = 456789; = 3
+//		int a = 10; //= 1
+//		int a = 12; //= 3
+		int a = 456789; //= 3
 		
 		int result = solution(a);
 		
@@ -33,6 +34,7 @@ public class Coopang2 {
 		while (inputNumber != 0) {
 			sum += (inputNumber%10);
 			inputNumber = inputNumber/10;
+			System.out.println("sum = " + sum);
 		}
         
         return sum;
