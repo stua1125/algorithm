@@ -10,15 +10,19 @@ public class KaKao_3 {
 
 		String word = "baaabbc";
 		
+		System.out.println("start");
+		
 		int K = 3;
+		int count = 0;
 		
 		for(int i = 0; i < word.length(); i++) {
 			char a = word.charAt(i);
 			int tem_j = i + 1;
-			int count = 0;
+			count = 0;
 			while(tem_j < word.length()) {
 				if(a == word.charAt(tem_j)) {
 					count++;
+					tem_j++;
 				} else {
 					if(count >= K) {
 						String alphabetList = "";
@@ -35,6 +39,7 @@ public class KaKao_3 {
 		}
 		
 		System.out.println(word);
+		System.out.println(count);
 
 	}
 
