@@ -6,16 +6,31 @@ public class AddTwoNumbers {
 		// TODO Auto-generated method stub
 		ListNode resultNode = new ListNode();
 
-		ListNode node1 = new ListNode(3);
-		ListNode node2 = new ListNode(4, node1);
-		ListNode node3 = new ListNode(2, node2);
+//		ListNode node1 = new ListNode(3);
+//		ListNode node2 = new ListNode(4, node1);
+//		ListNode node3 = new ListNode(2, node2);		
+
+//		ListNode nodeA = new ListNode(4);
+//		ListNode nodeB = new ListNode(6, nodeA);
+//		ListNode nodeC = new ListNode(5, nodeB);		
+//		resultNode = addTwoNumbers(node3, nodeC);
 		
-		ListNode nodeA = new ListNode(4);
-		ListNode nodeB = new ListNode(6, nodeA);
-//		ListNode nodeB = new ListNode(6);
-		ListNode nodeC = new ListNode(5, nodeB);
+		ListNode node1 = new ListNode(9);
+		ListNode node2 = new ListNode(9, node1);
+		ListNode node3 = new ListNode(9, node2);
+		ListNode node4 = new ListNode(9, node3);
+		ListNode node5 = new ListNode(9, node4);
+		ListNode node6 = new ListNode(9, node5);
+		ListNode node7 = new ListNode(9, node6);
 		
-		resultNode = addTwoNumbers(node3, nodeC);
+		ListNode nodeA = new ListNode(9);
+		ListNode nodeB = new ListNode(9, nodeA);
+		ListNode nodeC = new ListNode(9, nodeB);
+		ListNode nodeD = new ListNode(9, nodeC);
+		
+		resultNode = addTwoNumbers(node7, nodeD);
+
+		
 		System.out.println("");
 		System.out.println("==============");
 		printNodes(resultNode);
@@ -47,10 +62,13 @@ public class AddTwoNumbers {
 				sumVal += 1;
 			}
 			
+			// l1이 널이 아닐경우
 			if(l1 != null) {
 				sumVal += l1.val;
 				l1 = l1.next;
 			}
+			
+			// l2이 널이 아닐경우
 			if(l2 != null) {
 				sumVal += l2.val;
 				l2 = l2.next;
@@ -74,10 +92,12 @@ public class AddTwoNumbers {
 			
 //          nomal insert
 //			do~while문 대신 첫번째 노드입력할때 firstFlag 변수로 분개처리(헤드의 다음 첫 노드 val 설정)
+			
+			// 첫 노드
 			if(firstFlag) {
 				resultNode.val = sumVal;
 				firstFlag = false;
-			} else {
+			} else { // 처음 아닌 노드
 				ListNode tempNode = new ListNode(sumVal);
 				resultNode.next = tempNode;
 				resultNode = resultNode.next;
