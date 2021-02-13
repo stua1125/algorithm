@@ -9,7 +9,7 @@ public class KaKao_3 {
 		// TODO Auto-generated method stub
 
 		String word = "baaabbc";
-		
+
 		System.out.println("start");
 		
 		int K = 3;

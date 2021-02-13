@@ -17,6 +17,7 @@ public class KaKao_4 {
 	            String s = ((char) j) + "";
 	            String tmpAlp = new String(new char[K]).replace("\0", s);
 	            alphabetList.add(tmpAlp);
+	            System.out.println("tmpAlp : " + tmpAlp);
          }
 
          for(int i = 0; i < word.length(); i++) {

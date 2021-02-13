@@ -9,12 +9,9 @@ public class RemoveElement {
 		int[] nums = {3,2,2,3};
 		int val = 3;
 		
-		System.out.println(removeElement(nums, val));
-		
 		for(int i = 0; i < nums.length; i++) {
 			System.out.print(nums[i] + " ");
 		}
-		System.out.println();
 	}
 	
 	
@@ -29,8 +26,6 @@ public class RemoveElement {
 			} 
 		}
 		
-		
-		System.out.println();
 		return resultCount;
     }
 

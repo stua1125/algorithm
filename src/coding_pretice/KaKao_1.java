@@ -22,7 +22,7 @@ public class KaKao_1 {
 		
 		Map<Integer, Integer> countMap = new HashMap<>();
 		
-		// listA ¹è¿­¿¡ ÇØ½¬¸Ê Å¸ÀÔÀ¸·Î ¼ıÀÚ¸¦ key·Î µÎ°í value´Â count·Î »ç¿ë
+		// listA ë°°ì—´ì— í•´ì‰¬ë§µ íƒ€ì…ìœ¼ë¡œ ìˆ«ìë¥¼ keyë¡œ ë‘ê³  valueëŠ” countë¡œ ì‚¬ìš©
 		listA.forEach(e -> {
 			System.out.println("e" + e.byteValue());
 			Integer count = countMap.get(e);
@@ -32,11 +32,11 @@ public class KaKao_1 {
 		System.out.println("===================================================");
 		
 		countMap.forEach( (k, v) -> {
-			System.out.println("k " + k + "v " + v);
+			System.out.println("k: " + k + ", v: " + v);
 		});
 		
 		
-		// ¸Ê¿¡¼­ Á¤·ÄÀ» ÇÏ±âÀ§ÇØ list<list<int>>ÇüÀ¸·Î º¯È¯
+		// ë§µì—ì„œ ì •ë ¬ì„ í•˜ê¸°ìœ„í•´ list<list<int>>í˜•ìœ¼ë¡œ ë³€í™˜
 		List<List<Integer>> resultList = new ArrayList<>();
 		countMap.forEach( (k, v) ->{
 			System.out.println("k" + k);
@@ -49,7 +49,7 @@ public class KaKao_1 {
 		});
 		
 		System.out.println(resultList);
-		// list ¸¹Àº ¼ıÀÚ ¼ø¼­´ë·Î Á¤·Ä (¶÷´Ù·Î ÇØ½¬ Å°¸¦ °¡Áö°í Á¤·ÄÇÔ)
+		// list ë§ì€ ìˆ«ì ìˆœì„œëŒ€ë¡œ ì •ë ¬ (ëŒë‹¤ë¡œ í•´ì‰¬ í‚¤ë¥¼ ê°€ì§€ê³  ì •ë ¬í•¨)
 		resultList.sort( (a,b) -> {
 			if(a.size() > b.size()) {
 				return -1;
@@ -60,6 +60,8 @@ public class KaKao_1 {
 			}
 		}); 
 		
+	
+		
 		resultList.forEach( (a) -> {
 			System.out.println("a : " + a);
 //			System.out.println("count : " + count);
@@ -69,7 +71,7 @@ public class KaKao_1 {
 		int is_half = 0;
 		int count = 0;
 		
-		// ¹è¿­ »çÀÌÁî°¡ ¹İ ÀÌÇÏ°¡ µÇ¾ú´ÂÁö Ã¼Å©
+		// ë°°ì—´ ì‚¬ì´ì¦ˆê°€ ë°˜ ì´í•˜ê°€ ë˜ì—ˆëŠ”ì§€ ì²´í¬
 		for(int i = 0; i < resultList.size(); i++) {
 			is_half += resultList.get(i).size();
 			count++;
