@@ -9,10 +9,7 @@ public class SymmetricTree {
 	}
 
 	public boolean isSymmetric(TreeNode root) {
-		
-		while(true) {
-			
-		}
+
 		return false;
 	}
 
